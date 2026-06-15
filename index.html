@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lab in a Box | GCSE practical science kits</title>
-  <meta name="description" content="GCSE Biology, Chemistry and Physics practical kits for home-educated students." />
+  <title>Lab in a Box | Practical science education at home</title>
+  <meta name="description" content="Practical science kits for home-educated students from KS2 to GCSE." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -12,26 +12,27 @@
     <a class="brand-label" href="#top" aria-label="Lab in a Box home">
       <div>
         <strong>LAB IN A BOX</strong>
-        <span>GCSE PRACTICAL SCIENCE AT HOME</span>
+        <span>PRACTICAL SCIENCE EDUCATION AT HOME</span>
+        <span class="brand-colours" aria-hidden="true"><i></i><i></i><i></i></span>
       </div>
     </a>
     <nav aria-label="Main navigation">
       <a href="#kits">Kits</a>
       <a href="#method">Method</a>
       <a href="#bundle">Bundle</a>
-      <a href="#register">Register interest</a>
+      <a href="#register">Find your kit</a>
     </nav>
   </header>
 
   <main id="top">
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">GCSE home science kits</p>
+        <p class="eyebrow">Practical science for every stage</p>
         <h1>Practical science, ready to use at home.</h1>
-        <p class="lede">Complete Biology, Chemistry and Physics kits for home-educated students. Each one brings together the equipment, practical guides, recording sheets and exam practice needed to learn through experiments.</p>
+        <p class="lede">Complete science kits for home-educated students at KS2, KS3 and GCSE. Each one brings together the equipment, practical guides, recording sheets and questions needed to learn through experiments.</p>
         <div class="actions">
           <a class="button primary" href="#kits">View the kits</a>
-          <a class="button secondary" href="#register">Register interest</a>
+          <a class="button secondary" href="#register">Find your kit</a>
         </div>
       </div>
 
@@ -39,7 +40,8 @@
         <div class="label-card">
           <div>
             <strong>LAB IN A BOX</strong>
-            <span>GCSE PRACTICAL SCIENCE</span>
+            <span>PRACTICAL SCIENCE EDUCATION AT HOME</span>
+            <span class="brand-colours" aria-hidden="true"><i></i><i></i><i></i></span>
           </div>
         </div>
         <div class="spec-list">
@@ -50,13 +52,13 @@
           <span>Exam questions</span>
           <span>Sample answers</span>
           <span>Write-up feedback</span>
-          <span>GCSE skills</span>
+          <span>Curriculum skills</span>
         </div>
       </div>
     </section>
 
     <section class="section intro">
-      <p>One organised kit. Clear instructions. Practical work that supports GCSE study.</p>
+      <p>One organised kit. Clear instructions. Practical work that supports science learning at every stage.</p>
     </section>
 
     <section class="section" id="kits">
@@ -69,6 +71,30 @@
       </div>
 
       <div class="product-grid">
+        <article class="product-card ks2">
+          <p class="kit-code">KS2</p>
+          <h3>KS2 Science Kit</h3>
+          <p>Hands-on investigations across living things, materials, forces, light and sound.</p>
+          <ul>
+            <li>Age-appropriate reusable equipment</li>
+            <li>Guided activities and recording sheets</li>
+            <li>Clear parent notes and explanations</li>
+            <li>Questions and sample answers</li>
+          </ul>
+        </article>
+
+        <article class="product-card ks3">
+          <p class="kit-code">KS3</p>
+          <h3>KS3 Science Kit</h3>
+          <p>Biology, Chemistry and Physics investigations that build confident practical habits.</p>
+          <ul>
+            <li>Structured practical equipment</li>
+            <li>Methods, results tables and analysis</li>
+            <li>Safety and parent guidance</li>
+            <li>Linked questions and sample answers</li>
+          </ul>
+        </article>
+
         <article class="product-card biology">
           <p class="kit-code">Biology</p>
           <h3>GCSE Biology Kit</h3>
@@ -106,9 +132,9 @@
         </article>
 
         <article class="product-card bundle" id="bundle">
-          <p class="kit-code">Complete set</p>
-          <h3>GCSE Science Bundle</h3>
-          <p>Biology, Chemistry and Physics together in one practical science set.</p>
+          <p class="kit-code">Complete pathway</p>
+          <h3>Complete Science Bundle</h3>
+          <p>A broad practical science collection spanning KS2, KS3 and GCSE.</p>
           <ul>
             <li>All three subject kits</li>
             <li>Shared equipment included once</li>
@@ -140,7 +166,7 @@
         <p>Each practical is organised to make preparation straightforward and help students work with increasing independence, with app-based feedback on practical write-ups.</p>
       </div>
       <div class="proof-grid">
-        <span>GCSE-focused</span>
+        <span>Curriculum-linked</span>
         <span>Clear safety notes</span>
         <span>Reusable equipment</span>
         <span>Exam practice and feedback</span>
@@ -148,9 +174,9 @@
     </section>
 
     <section class="section register" id="register">
-      <p class="eyebrow">Early access</p>
-      <h2>Join the launch list</h2>
-      <p>Receive launch updates, sample practicals and early access to the kits.</p>
+      <p class="eyebrow">Get started</p>
+      <h2>Find the right kit</h2>
+      <p>Tell us which stage or subject you need and we will help you choose.</p>
 
       <form name="interest" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="interest" />
@@ -165,13 +191,15 @@
         <label>
           Interested in
           <select name="kit">
-            <option>GCSE Science Bundle</option>
+            <option>Complete Science Bundle</option>
+            <option>KS2 Science Kit</option>
+            <option>KS3 Science Kit</option>
             <option>GCSE Biology Kit</option>
             <option>GCSE Chemistry Kit</option>
             <option>GCSE Physics Kit</option>
           </select>
         </label>
-        <button type="submit">Register interest</button>
+        <button type="submit">Send my selection</button>
       </form>
     </section>
   </main>
@@ -180,10 +208,11 @@
     <div class="brand-label small">
       <div>
         <strong>LAB IN A BOX</strong>
-        <span>GCSE PRACTICAL SCIENCE AT HOME</span>
+        <span>PRACTICAL SCIENCE EDUCATION AT HOME</span>
+        <span class="brand-colours" aria-hidden="true"><i></i><i></i><i></i></span>
       </div>
     </div>
-    <p>&copy; Lab in a Box. GCSE home science kits.</p>
+    <p>&copy; Lab in a Box. Practical science education at home.</p>
   </footer>
 </body>
 </html>

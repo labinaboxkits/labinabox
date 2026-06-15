@@ -27,6 +27,11 @@ p, h1, h2, h3 { margin-top: 0; }
 .brand-label > div, .label-card > div { padding: .8rem 1rem .85rem; }
 .brand-label strong, .label-card strong { display: block; font-size: 1.05rem; font-weight: 800; letter-spacing: .18em; }
 .brand-label span, .label-card span { display: block; margin-top: .35rem; color: #3e3b33; font-size: .55rem; font-weight: 700; letter-spacing: .13em; }
+.brand-colours { display: flex !important; gap: 4px; width: 54px; margin-top: .55rem !important; }
+.brand-colours i { display: block; width: 15px; height: 5px; }
+.brand-colours i:nth-child(1) { background: var(--sulphur); }
+.brand-colours i:nth-child(2) { background: #244936; }
+.brand-colours i:nth-child(3) { background: #6f355d; }
 
 nav { display: flex; align-items: center; gap: 0; border: 1px solid var(--line); background: var(--cream); }
 nav a { padding: .58rem .8rem; border-right: 1px solid var(--line); font-size: .68rem; font-weight: 750; letter-spacing: .07em; text-transform: uppercase; }
@@ -46,7 +51,7 @@ h3 { font-size: 1.3rem; line-height: 1.18; }
 .button:hover, button:hover { background: var(--sulphur); color: var(--ink); }
 
 .hero-card { position: relative; padding: clamp(1.5rem, 3vw, 2.25rem); border: 1px solid var(--line); background: var(--kraft) url("assets/kraft-paper.webp") center / cover; box-shadow: 15px 15px 0 var(--sulphur); }
-.hero-card::before { content: "HOME LAB / GCSE SERIES"; display: block; margin-bottom: 1.2rem; font-size: .6rem; font-weight: 800; letter-spacing: .13em; }
+.hero-card::before { content: "HOME LAB / SCIENCE SERIES"; display: block; margin-bottom: 1.2rem; font-size: .6rem; font-weight: 800; letter-spacing: .13em; }
 .label-card { display: flex; align-items: center; margin-inline: auto; background: rgba(255,253,247,.76); }
 .label-card::after { display: none; }
 .label-card strong { font-size: clamp(1.45rem, 2.6vw, 2.2rem); }
@@ -60,11 +65,13 @@ h3 { font-size: 1.3rem; line-height: 1.18; }
 .section-heading h2, .section-heading p { margin-bottom: 0; }
 .section-heading > p { max-width: 310px; color: var(--muted); }
 
-.product-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: .8rem; }
+.product-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: .8rem; }
 .product-card { display: flex; min-height: 390px; flex-direction: column; padding: 1.35rem; border: 1px solid var(--line); background: var(--cream); box-shadow: 5px 5px 0 rgba(52,52,45,.09); }
+.product-card.ks2 { border-top: 6px solid var(--sulphur); }
+.product-card.ks3 { border-top: 6px solid #6f355d; }
 .product-card.biology { border-top: 6px solid var(--green); }
-.product-card.chemistry { border-top: 6px solid var(--red); }
-.product-card.physics { border-top: 6px solid var(--blue); }
+.product-card.chemistry { border-top: 6px solid #6f355d; }
+.product-card.physics { border-top: 6px solid #244936; }
 .product-card.bundle { border-top: 6px solid var(--sulphur); background: var(--kraft) url("assets/kraft-paper.webp") center / cover; }
 .product-card > p:not(.kit-code), .product-card ul { color: var(--muted); }
 .product-card.bundle > p:not(.kit-code), .product-card.bundle ul { color: #37342d; }

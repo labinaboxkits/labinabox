@@ -47,8 +47,7 @@ nav {
 }
 
 .brand-label, .label-card {
-  display: inline-grid;
-  grid-template-columns: 1fr auto;
+  display: inline-block;
   border: 2px solid var(--line);
   min-width: 300px;
   background: rgba(255,255,255,.35);
@@ -75,23 +74,6 @@ nav {
   font-size: .62rem;
   letter-spacing: .18em;
   line-height: 1.5;
-}
-
-.kit-panel {
-  border-left: 2px solid var(--line);
-  min-width: 72px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: var(--red);
-  font-family: "Courier New", Courier, monospace;
-  letter-spacing: .12em;
-}
-
-.kit-panel b {
-  font-size: 1.8rem;
-  line-height: 1;
 }
 
 .hero {

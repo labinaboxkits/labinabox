@@ -36,8 +36,14 @@ nav a { padding: .58rem .8rem; border-right: 1px solid var(--line); font-size: .
 nav a:last-child { border-right: 0; }
 nav a:hover, nav a:focus-visible { background: var(--sulphur); }
 
-.hero { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(360px, .8fr); gap: clamp(3rem, 8vw, 8rem); align-items: center; min-height: min(800px, calc(100vh - 96px)); padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 7vw, 7rem); overflow: hidden; }
+.hero { position: relative; isolation: isolate; display: grid; grid-template-columns: minmax(0, 1fr) minmax(360px, .8fr); gap: clamp(3rem, 8vw, 8rem); align-items: center; min-height: min(800px, calc(100vh - 96px)); padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 7vw, 7rem); overflow: hidden; }
 .hero::after { content: ""; position: absolute; top: 15%; right: -7%; width: 38%; height: 60%; border: 1px solid var(--line); background: var(--kraft-light) url("assets/kraft-paper.webp") center / cover; opacity: .5; transform: rotate(5deg); z-index: -1; }
+.hero-copy, .hero-card { position: relative; z-index: 1; }
+.rate-graph { position: absolute; left: 22%; top: 5%; width: min(58vw, 780px); color: var(--forest); opacity: .12; transform: rotate(-2deg); z-index: 0; pointer-events: none; }
+.graph-grid path { fill: none; stroke: currentColor; stroke-width: 1; }
+.graph-grid path:not(:first-child) { stroke-dasharray: 4 8; }
+.graph-curve { fill: none; stroke: var(--plum); stroke-linecap: round; stroke-width: 9; }
+.graph-labels { fill: currentColor; font-family: "Segoe UI", Arial, sans-serif; font-size: 17px; font-weight: 800; letter-spacing: 2px; }
 .eyebrow { margin-bottom: .8rem; color: #79613e; font-size: .68rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
 h1 { max-width: 690px; margin-bottom: 1.4rem; font-size: clamp(2.9rem, 5.5vw, 5.5rem); font-weight: 760; line-height: .98; }
 h2 { margin-bottom: 1rem; font-size: clamp(2rem, 3.7vw, 3.75rem); font-weight: 720; line-height: 1; }
@@ -63,7 +69,7 @@ h3 { font-size: 1.3rem; line-height: 1.18; }
 .section-heading > p { max-width: 310px; color: var(--muted); }
 
 .product-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: .8rem; }
-.product-card { display: flex; min-height: 390px; flex-direction: column; padding: 1.35rem; border: 1px solid var(--line); background: var(--cream); box-shadow: 5px 5px 0 rgba(52,52,45,.09); }
+.product-card { position: relative; display: flex; min-height: 390px; flex-direction: column; padding: 1.35rem; border: 1px solid var(--line); background: var(--cream); box-shadow: 5px 5px 0 rgba(52,52,45,.09); }
 .product-card.ks2 { border-top: 6px solid var(--forest); }
 .product-card.ks3 { border-top: 6px solid var(--forest); }
 .product-card.biology { border-top: 6px solid var(--plum); }
@@ -77,6 +83,12 @@ h3 { font-size: 1.3rem; line-height: 1.18; }
 .product-card.bundle ul { border-color: rgba(52,52,45,.45); }
 .product-card li + li { margin-top: .4rem; }
 .product-card li::before { content: "—"; margin-right: .5rem; color: #778313; }
+.science-mark { position: absolute; top: 1.2rem; right: 1.2rem; display: grid; width: 58px; height: 58px; place-items: center; border: 1px solid currentColor; border-radius: 50%; color: var(--plum); line-height: 1; }
+.science-mark span { font-size: .52rem; font-weight: 900; letter-spacing: .12em; }
+.science-mark b { font-family: Georgia, serif; font-size: .82rem; font-weight: 600; }
+.biology-mark b { font-size: .57rem; font-style: italic; }
+.physics-mark b { font-size: 1.2rem; }
+.chemistry-mark sub { font-size: .58em; }
 
 .split, .proof { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(4rem, 9vw, 9rem); align-items: start; }
 .split > div:first-child > p:last-child, .proof > div > p:last-child { max-width: 600px; color: var(--muted); }
@@ -115,6 +127,7 @@ footer { display: flex; align-items: flex-end; justify-content: space-between; g
   nav a { padding: .5rem .58rem; font-size: .59rem; }
   .hero { padding-top: 3rem; }
   .hero::after { width: 70%; right: -35%; }
+  .rate-graph { left: 5%; top: 10%; width: 115%; opacity: .075; }
   .hero-card { box-shadow: 9px 9px 0 var(--sulphur); }
   .section-heading, footer { align-items: flex-start; flex-direction: column; }
   .product-grid, .proof-grid, form { grid-template-columns: 1fr; }

@@ -21,12 +21,12 @@ body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Seg
 a { color: inherit; text-decoration: none; }
 p, h1, h2, h3 { margin-top: 0; }
 
-.site-header { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: 2rem; min-height: 96px; padding: 1rem clamp(1rem, 5vw, 5rem); border-bottom: 1px solid var(--line); background: var(--kraft) url("assets/kraft-paper.webp") center / cover; }
+.site-header { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: 2rem; min-height: 148px; padding: 1.35rem clamp(1rem, 5vw, 5rem); border-bottom: 1px solid var(--line); background: var(--kraft) url("assets/kraft-paper.webp") center / cover; }
 .brand-label, .label-card { position: relative; display: inline-block; width: fit-content; max-width: 100%; border: 3px solid var(--ink); background: var(--cream); box-shadow: 8px 8px 0 rgba(23,24,19,.28); }
-.site-header .brand-label { background: var(--cream); border-width: 4px; }
-.site-header .brand-label > div { padding: 1rem 1.55rem 1.1rem; }
-.site-header .brand-label strong { font-size: clamp(1.55rem, 2vw, 2rem); font-weight: 950; letter-spacing: .16em; }
-.site-header .brand-label span { font-size: .62rem; letter-spacing: .14em; }
+.site-header .brand-label { width: min(590px, 48vw); background: var(--cream); border-width: 5px; }
+.site-header .brand-label > div { padding: 1.7rem 2.6rem 1.8rem; }
+.site-header .brand-label strong { font-size: clamp(2rem, 2.8vw, 3rem); font-weight: 950; letter-spacing: .15em; white-space: nowrap; }
+.site-header .brand-label span { margin-top: .9rem; padding-top: .75rem; border-top-width: 3px; font-size: clamp(.62rem, .9vw, .88rem); letter-spacing: .13em; white-space: nowrap; }
 .brand-label > div, .label-card > div { padding: .85rem 1.15rem 1rem; }
 .brand-label strong, .label-card strong { display: block; font-size: 1.22rem; font-weight: 900; letter-spacing: .18em; text-align: center; }
 .brand-label span, .label-card span { display: block; margin-top: .55rem; padding-top: .5rem; border-top: 2px solid var(--ink); color: var(--ink); font-size: .56rem; font-weight: 800; letter-spacing: .13em; text-align: center; }
@@ -100,6 +100,7 @@ footer { display: flex; align-items: flex-end; justify-content: space-between; g
 
 @media (max-width: 950px) {
   .site-header { align-items: flex-start; flex-direction: column; }
+  .site-header .brand-label { width: min(590px, 100%); }
   nav { max-width: 100%; overflow-x: auto; }
   .hero, .split, .proof { grid-template-columns: 1fr; }
   .hero { min-height: 0; }
@@ -108,9 +109,9 @@ footer { display: flex; align-items: flex-end; justify-content: space-between; g
 
 @media (max-width: 620px) {
   .brand-label { max-width: 100%; }
-  .site-header .brand-label > div { padding: .8rem 1rem .9rem; }
-  .site-header .brand-label strong { font-size: 1.35rem; }
-  .site-header .brand-label span { font-size: .52rem; }
+  .site-header .brand-label > div { padding: 1rem .8rem 1.1rem; }
+  .site-header .brand-label strong { font-size: clamp(1.35rem, 7vw, 2rem); white-space: normal; }
+  .site-header .brand-label span { margin-top: .65rem; padding-top: .6rem; font-size: clamp(.47rem, 2.6vw, .62rem); white-space: normal; }
   nav { width: 100%; }
   nav a { padding: .5rem .58rem; font-size: .59rem; }
   .hero { padding-top: 3rem; }

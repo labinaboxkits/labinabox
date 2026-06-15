@@ -41,7 +41,7 @@ h3 { font-size: 1.3rem; line-height: 1.2; }
 
 .hero-card { position: relative; padding: 2rem; border: 1px solid var(--ink); background: var(--forest); box-shadow: 14px 14px 0 var(--yellow); color: white; }
 .hero-card::before { content: "LAB RECORD / 001"; display: block; margin-bottom: 1.5rem; font-size: .62rem; font-weight: 700; letter-spacing: .12em; }
-.label-card { display: flex; align-items: center; min-height: 165px; width: 100%; color: var(--ink); }
+.label-card { display: flex; align-items: center; width: fit-content; max-width: 100%; margin-inline: auto; color: var(--ink); }
 .label-card strong { font-size: clamp(1.5rem, 2.6vw, 2.2rem); }
 .spec-list { display: grid; grid-template-columns: repeat(2, 1fr); margin-top: 1.5rem; border-top: 1px solid rgba(255,255,255,.5); border-left: 1px solid rgba(255,255,255,.5); }
 .spec-list span { padding: .7rem; border-right: 1px solid rgba(255,255,255,.5); border-bottom: 1px solid rgba(255,255,255,.5); font-size: .68rem; font-weight: 650; }

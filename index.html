@@ -18,7 +18,7 @@
     <nav aria-label="Main navigation">
       <a href="#kits">Kits</a>
       <a href="#method">Method</a>
-      <a href="#bundle">Bundle</a>
+      <a href="#story">Our story</a>
       <a href="#register">Register interest</a>
     </nav>
   </header>
@@ -70,7 +70,7 @@
 
       <div class="product-grid">
         <article class="product-card ks2">
-          <p class="kit-code">KS2</p>
+          <p class="kit-code">KS2 · 7–11 years old</p>
           <h3>KS2 Science Kit</h3>
           <p>Hands-on investigations across living things, materials, forces, light and sound.</p>
           <ul>
@@ -82,7 +82,7 @@
         </article>
 
         <article class="product-card ks3">
-          <p class="kit-code">KS3</p>
+          <p class="kit-code">KS3 · 11–14 years old</p>
           <h3>KS3 Science Kit</h3>
           <p>Biology, Chemistry and Physics investigations that build confident practical habits.</p>
           <ul>
@@ -95,7 +95,7 @@
 
         <article class="product-card biology">
           <img class="subject-symbol dna-symbol" src="assets/dna-plum.png" alt="" />
-          <p class="kit-code">Biology</p>
+          <p class="kit-code">GCSE Biology · 14–16 years old</p>
           <h3>GCSE Biology Kit</h3>
           <p>Microscopy, enzymes, osmosis, food tests, sampling and respiration.</p>
           <ul>
@@ -110,7 +110,7 @@
           <svg class="subject-symbol" viewBox="0 0 64 64" aria-hidden="true">
             <path d="M23 7H41M25 7V27L10 54C8 58 11 61 16 61H48C53 61 56 58 54 54L39 27V7" />
           </svg>
-          <p class="kit-code">Chemistry</p>
+          <p class="kit-code">GCSE Chemistry · 14–16 years old</p>
           <h3>GCSE Chemistry Kit</h3>
           <p>Acids and alkalis, indicators, reactions, separation, rates and measurement.</p>
           <ul>
@@ -128,7 +128,7 @@
             <g transform="rotate(120 32 32)"><ellipse cx="32" cy="32" rx="25" ry="11" /></g>
             <circle cx="32" cy="32" r="4" />
           </svg>
-          <p class="kit-code">Physics</p>
+          <p class="kit-code">GCSE Physics · 14–16 years old</p>
           <h3>GCSE Physics Kit</h3>
           <p>Electricity, forces, energy, waves, measurement, graphs and uncertainty.</p>
           <ul>
@@ -140,7 +140,7 @@
         </article>
 
         <article class="product-card bundle" id="bundle">
-          <p class="kit-code">Complete GCSE pathway</p>
+          <p class="kit-code">Complete GCSE pathway · 14–16 years old</p>
           <h3>Complete GCSE Science Bundle</h3>
           <p>A complete GCSE practical science collection covering biology, chemistry and physics.</p>
           <ul>
@@ -155,15 +155,17 @@
 
     <section class="section split" id="method">
       <div>
-        <p class="eyebrow">How it works</p>
-        <h2>A clear routine for every practical.</h2>
-        <p>Students prepare the equipment, follow the guide, record what happens and use their results to explain the science.</p>
+        <p class="eyebrow">Working scientifically</p>
+        <h2>A proper scientific method for every practical.</h2>
+        <p>Students plan a fair investigation, collect reliable evidence and use it to reach and evaluate a scientific conclusion.</p>
       </div>
       <div class="steps">
-        <div><b>01</b><span>Prepare the equipment</span></div>
-        <div><b>02</b><span>Follow the guide</span></div>
-        <div><b>03</b><span>Record the results</span></div>
-        <div><b>04</b><span>Explain the science</span></div>
+        <div><b>01</b><span>Identify the variables</span></div>
+        <div><b>02</b><span>Prepare the equipment</span></div>
+        <div><b>03</b><span>Follow the method</span></div>
+        <div><b>04</b><span>Record the results</span></div>
+        <div><b>05</b><span>Draw conclusions</span></div>
+        <div><b>06</b><span>Evaluate the investigation</span></div>
       </div>
     </section>
 
@@ -178,6 +180,17 @@
         <span>Clear safety notes</span>
         <span>Reusable equipment</span>
         <span>Exam practice and feedback</span>
+      </div>
+    </section>
+
+    <section class="section story" id="story">
+      <p class="eyebrow">Our story</p>
+      <div class="story-layout">
+        <h2>Built by science teachers, for serious science at home.</h2>
+        <div>
+          <p>Lab in a Box was created by UK secondary science teachers with years of classroom and laboratory experience. We understand curriculum requirements, practical technique, laboratory craft and the common pitfalls that can stop students gaining confidence.</p>
+          <p>We saw a gap between generic STEM activity kits and the rigorous practical work students need for future study and careers in science. Our kits bring proper scientific thinking into the home: purposeful experiments, reliable methods, careful recording and meaningful evaluation.</p>
+        </div>
       </div>
     </section>
 
@@ -197,14 +210,11 @@
           <input type="email" name="email" autocomplete="email" required />
         </label>
         <label>
-          Interested in
-          <select name="kit">
-            <option>Complete GCSE Science Bundle</option>
-            <option>KS2 Science Kit</option>
-            <option>KS3 Science Kit</option>
-            <option>GCSE Biology Kit</option>
-            <option>GCSE Chemistry Kit</option>
-            <option>GCSE Physics Kit</option>
+          Stage of interest
+          <select name="stage">
+            <option>KS2</option>
+            <option>KS3</option>
+            <option>GCSE</option>
           </select>
         </label>
         <button type="submit">Send my selection</button>

@@ -20,6 +20,7 @@ html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif; line-height: 1.5; }
 a { color: inherit; text-decoration: none; }
 p, h1, h2, h3 { margin-top: 0; }
+section[id] { scroll-margin-top: 164px; }
 
 .site-header { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: 2rem; min-height: 112px; padding: 1rem clamp(1rem, 5vw, 5rem); border-bottom: 1px solid var(--line); background: var(--kraft) url("assets/kraft-paper.webp") center / cover; }
 .brand-label, .label-card { position: relative; display: inline-block; width: fit-content; max-width: 100%; border: 3px solid var(--ink); background: var(--cream); box-shadow: 8px 8px 0 rgba(23,24,19,.28); }
@@ -36,7 +37,7 @@ nav a { padding: .58rem .8rem; border-right: 1px solid var(--line); font-size: .
 nav a:last-child { border-right: 0; }
 nav a:hover, nav a:focus-visible { background: var(--sulphur); }
 
-.hero { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(360px, .8fr); gap: clamp(3rem, 8vw, 8rem); align-items: center; min-height: min(800px, calc(100vh - 96px)); padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 7vw, 7rem); overflow: hidden; }
+.hero { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(360px, .8fr); gap: clamp(2.5rem, 5vw, 5rem); align-items: center; min-height: 610px; padding: clamp(2.75rem, 5vw, 4.5rem) clamp(1.25rem, 7vw, 7rem); overflow: hidden; }
 .hero::after { content: ""; position: absolute; top: 15%; right: -7%; width: 38%; height: 60%; border: 1px solid var(--line); background: var(--kraft-light) url("assets/kraft-paper.webp") center / cover; opacity: .5; transform: rotate(5deg); z-index: -1; }
 .eyebrow { margin-bottom: .8rem; color: #79613e; font-size: .68rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
 h1 { max-width: 690px; margin-bottom: 1.4rem; font-size: clamp(2.9rem, 5.5vw, 5.5rem); font-weight: 760; line-height: .98; }
@@ -74,7 +75,8 @@ h3 { font-size: 1.3rem; line-height: 1.18; }
 .product-card.bundle { border-top: 6px solid var(--ink); background: var(--sulphur); }
 .product-card > p:not(.kit-code), .product-card ul { color: var(--muted); }
 .product-card.bundle > p:not(.kit-code), .product-card.bundle ul { color: #37342d; }
-.kit-code { margin-bottom: 4.2rem; color: #79613e; font-size: .64rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.kit-code { max-width: calc(100% - 76px); margin-bottom: 3.5rem; color: #79613e; font-size: .78rem; font-weight: 850; letter-spacing: .08em; line-height: 1.35; text-transform: uppercase; }
+.product-card.ks2 .kit-code, .product-card.ks3 .kit-code, .product-card.bundle .kit-code { max-width: 100%; }
 .product-card ul { margin: auto 0 0; padding: 1rem 0 0; border-top: 1px solid var(--soft-line); font-size: .82rem; list-style: none; }
 .product-card.bundle ul { border-color: rgba(52,52,45,.45); }
 .product-card li + li { margin-top: .4rem; }
@@ -91,6 +93,11 @@ h3 { font-size: 1.3rem; line-height: 1.18; }
 .proof { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--kraft-light) url("assets/kraft-paper.webp") center / cover; }
 .proof-grid { display: grid; grid-template-columns: repeat(2,1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .proof-grid span { display: grid; min-height: 115px; place-items: center; padding: 1rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(255,253,247,.78); font-size: .78rem; font-weight: 750; text-align: center; }
+.story { border-bottom: 1px solid var(--line); }
+.story-layout { display: grid; grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr); gap: clamp(3rem, 8vw, 8rem); align-items: start; }
+.story-layout h2 { max-width: 650px; margin-bottom: 0; }
+.story-layout div { max-width: 700px; color: var(--muted); font-size: clamp(1rem, 1.3vw, 1.16rem); }
+.story-layout p:last-child { margin-bottom: 0; }
 
 .register { max-width: 820px; margin: auto; }
 .register > p:not(.eyebrow) { color: var(--muted); }
@@ -106,12 +113,13 @@ footer { display: flex; align-items: flex-end; justify-content: space-between; g
   .site-header { align-items: flex-start; flex-direction: column; }
   .site-header .brand-label { width: fit-content; max-width: 100%; }
   nav { max-width: 100%; overflow-x: auto; }
-  .hero, .split, .proof { grid-template-columns: 1fr; }
+  .hero, .split, .proof, .story-layout { grid-template-columns: 1fr; }
   .hero { min-height: 0; }
   .product-grid { grid-template-columns: repeat(2,1fr); }
 }
 
 @media (max-width: 620px) {
+  section[id] { scroll-margin-top: 220px; }
   .brand-label { max-width: 100%; }
   .site-header .brand-label > div { padding: .55rem .6rem .62rem; }
   .site-header .brand-label strong { font-size: clamp(1.65rem, 8vw, 2.2rem); white-space: normal; }

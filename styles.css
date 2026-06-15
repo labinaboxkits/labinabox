@@ -22,6 +22,11 @@ p, h1, h2, h3 { margin-top: 0; }
 .brand-label > div, .label-card > div { padding: .8rem 1rem; }
 .brand-label strong, .label-card strong { display: block; font-size: 1.05rem; font-weight: 800; letter-spacing: .17em; }
 .brand-label span, .label-card span { display: block; margin-top: .35rem; color: var(--muted); font-size: .54rem; font-weight: 650; letter-spacing: .12em; }
+.brand-colours { display: flex !important; gap: 4px; width: 54px; margin-top: .55rem !important; }
+.brand-colours i { display: block; width: 15px; height: 5px; }
+.brand-colours i:nth-child(1) { background: var(--yellow); }
+.brand-colours i:nth-child(2) { background: var(--forest); }
+.brand-colours i:nth-child(3) { background: #6f355d; }
 nav { display: flex; gap: 0; border-left: 1px solid var(--ink); }
 nav a { padding: .65rem 1rem; border-top: 1px solid var(--ink); border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); font-size: .68rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
 nav a:hover { background: var(--forest); color: white; }
@@ -54,12 +59,14 @@ h3 { font-size: 1.3rem; line-height: 1.2; }
 .section-heading h2, .section-heading p { margin-bottom: 0; }
 .section-heading > p { max-width: 320px; color: var(--muted); }
 
-.product-grid { counter-reset: kit; display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); border-top: 1px solid var(--ink); border-left: 1px solid var(--ink); }
+.product-grid { counter-reset: kit; display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); border-top: 1px solid var(--ink); border-left: 1px solid var(--ink); }
 .product-card { counter-increment: kit; display: flex; min-height: 390px; flex-direction: column; padding: 1.35rem; border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); background: var(--white); }
+.product-card.ks2 { box-shadow: inset 0 5px 0 var(--yellow); }
+.product-card.ks3 { box-shadow: inset 0 5px 0 #6f355d; }
 .product-card::before { content: "0" counter(kit); align-self: flex-end; color: var(--muted); font-family: Georgia, serif; font-size: 1.4rem; }
 .product-card.biology { box-shadow: inset 0 5px 0 #6c8068; }
-.product-card.chemistry { box-shadow: inset 0 5px 0 var(--red); }
-.product-card.physics { box-shadow: inset 0 5px 0 var(--blue); }
+.product-card.chemistry { box-shadow: inset 0 5px 0 #6f355d; }
+.product-card.physics { box-shadow: inset 0 5px 0 var(--forest); }
 .product-card.bundle { background: var(--forest); box-shadow: inset 0 5px 0 var(--yellow); color: white; }
 .product-card > p:not(.kit-code), .product-card ul { color: var(--muted); }
 .product-card.bundle p, .product-card.bundle ul, .product-card.bundle .kit-code, .product-card.bundle::before { color: #d4d9d3 !important; }

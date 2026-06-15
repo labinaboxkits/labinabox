@@ -2,6 +2,8 @@
   --paper: #f3f0e8;
   --ink: #18201b;
   --forest: #203b2d;
+  --plum: #6f355d;
+  --sulphur: #d7ee32;
   --muted: #686d66;
   --line: #aeb2a9;
   --red: #b34f3b;
@@ -56,18 +58,18 @@ h3 { font-size: 1.3rem; line-height: 1.2; }
 
 .product-grid { counter-reset: kit; display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); border-top: 1px solid var(--ink); border-left: 1px solid var(--ink); }
 .product-card { counter-increment: kit; display: flex; min-height: 390px; flex-direction: column; padding: 1.35rem; border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); background: var(--white); }
-.product-card.ks2 { box-shadow: inset 0 5px 0 var(--yellow); }
-.product-card.ks3 { box-shadow: inset 0 5px 0 #6f355d; }
+.product-card.ks2 { box-shadow: inset 0 5px 0 var(--forest); }
+.product-card.ks3 { box-shadow: inset 0 5px 0 var(--forest); }
 .product-card::before { content: "0" counter(kit); align-self: flex-end; color: var(--muted); font-family: Georgia, serif; font-size: 1.4rem; }
-.product-card.biology { box-shadow: inset 0 5px 0 #6c8068; }
-.product-card.chemistry { box-shadow: inset 0 5px 0 #6f355d; }
-.product-card.physics { box-shadow: inset 0 5px 0 var(--forest); }
-.product-card.bundle { background: var(--forest); box-shadow: inset 0 5px 0 var(--yellow); color: white; }
+.product-card.biology { box-shadow: inset 0 5px 0 var(--plum); }
+.product-card.chemistry { box-shadow: inset 0 5px 0 var(--plum); }
+.product-card.physics { box-shadow: inset 0 5px 0 var(--plum); }
+.product-card.bundle { background: var(--sulphur); box-shadow: inset 0 5px 0 var(--ink); color: var(--ink); }
 .product-card > p:not(.kit-code), .product-card ul { color: var(--muted); }
-.product-card.bundle p, .product-card.bundle ul, .product-card.bundle .kit-code, .product-card.bundle::before { color: #d4d9d3 !important; }
+.product-card.bundle p, .product-card.bundle ul, .product-card.bundle .kit-code, .product-card.bundle::before { color: #303126 !important; }
 .kit-code { margin: 2.5rem 0 .75rem; color: var(--red); font-size: .64rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
 .product-card ul { margin: auto 0 0; padding: 1rem 0 0; border-top: 1px solid var(--line); font-size: .84rem; list-style: none; }
-.product-card.bundle ul { border-color: #6d786f; }
+.product-card.bundle ul { border-color: rgba(24,32,27,.3); }
 .product-card li + li { margin-top: .4rem; }
 .product-card li::before { content: "—"; margin-right: .5rem; }
 

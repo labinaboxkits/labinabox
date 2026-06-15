@@ -1,0 +1,375 @@
+:root {
+  --paper: #f7f3ea;
+  --card: #efe6d5;
+  --kraft: #b89b72;
+  --ink: #111111;
+  --muted: #6f6a60;
+  --line: #161616;
+  --accent: #b6dc19;
+  --red: #b94832;
+  --bio: #6f7d63;
+  --chem: #9d4f38;
+  --phys: #315d78;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Inter, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.25rem clamp(1rem, 4vw, 4rem);
+  border-bottom: 1px solid rgba(0,0,0,.12);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: rgba(247,243,234,.92);
+  backdrop-filter: blur(10px);
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+  font-size: .78rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.brand-label, .label-card {
+  display: inline-grid;
+  grid-template-columns: 1fr auto;
+  border: 2px solid var(--line);
+  min-width: 300px;
+  background: rgba(255,255,255,.35);
+}
+
+.brand-label > div:first-child,
+.label-card > div:first-child {
+  padding: .75rem 1rem;
+}
+
+.brand-label strong,
+.label-card strong {
+  display: block;
+  font-weight: 900;
+  font-size: 1.15rem;
+  letter-spacing: .14em;
+}
+
+.brand-label span,
+.label-card span {
+  display: block;
+  margin-top: .25rem;
+  font-family: "Courier New", Courier, monospace;
+  font-size: .62rem;
+  letter-spacing: .18em;
+  line-height: 1.5;
+}
+
+.kit-panel {
+  border-left: 2px solid var(--line);
+  min-width: 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--red);
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: .12em;
+}
+
+.kit-panel b {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, .9fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: center;
+  min-height: 82vh;
+  padding: clamp(3rem, 8vw, 7rem) clamp(1rem, 6vw, 6rem);
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  font-family: "Courier New", Courier, monospace;
+  font-size: .78rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+h1, h2, h3, p { margin-top: 0; }
+
+h1 {
+  max-width: 760px;
+  font-size: clamp(3.2rem, 8vw, 7.4rem);
+  line-height: .9;
+  letter-spacing: -.06em;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 4.2rem);
+  line-height: .95;
+  letter-spacing: -.05em;
+}
+
+h3 {
+  font-size: 1.55rem;
+  letter-spacing: -.03em;
+}
+
+.lede {
+  max-width: 640px;
+  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+  color: #37332c;
+}
+
+.actions {
+  display: flex;
+  gap: .85rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.button, button {
+  border: 2px solid var(--line);
+  padding: .9rem 1.15rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: .78rem;
+  background: transparent;
+  cursor: pointer;
+}
+
+.button.primary, button {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.button.secondary:hover, button:hover {
+  background: var(--accent);
+  color: var(--ink);
+}
+
+.hero-card {
+  padding: 2rem;
+  background: var(--card);
+  border: 1px solid rgba(0,0,0,.12);
+  box-shadow: 16px 16px 0 rgba(0,0,0,.06);
+}
+
+.label-card {
+  width: 100%;
+  min-height: 160px;
+  background: var(--paper);
+}
+
+.label-card strong { font-size: clamp(1.5rem, 3vw, 2.5rem); }
+
+.spec-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: .5rem;
+  margin-top: 1rem;
+  font-family: "Courier New", Courier, monospace;
+  font-size: .68rem;
+  letter-spacing: .12em;
+  text-align: center;
+}
+
+.spec-list span {
+  border-top: 1px solid var(--line);
+  padding-top: .5rem;
+}
+
+.section {
+  padding: clamp(3rem, 7vw, 6rem) clamp(1rem, 6vw, 6rem);
+}
+
+.intro {
+  border-top: 2px solid var(--line);
+  border-bottom: 2px solid var(--line);
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.intro p {
+  max-width: 900px;
+  font-size: clamp(1.6rem, 3vw, 3.2rem);
+  line-height: 1.05;
+  letter-spacing: -.05em;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: end;
+  margin-bottom: 2rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.product-card {
+  min-height: 420px;
+  padding: 1.25rem;
+  border: 2px solid var(--line);
+  background: rgba(255,255,255,.25);
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card p { color: #37332c; }
+
+.kit-code {
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: .16em;
+  font-size: .75rem;
+  color: var(--muted) !important;
+  margin-bottom: auto;
+  padding-bottom: 5rem;
+}
+
+.product-card ul {
+  padding-left: 1rem;
+  margin-bottom: 0;
+  font-size: .95rem;
+}
+
+.product-card.biology { border-top: 8px solid var(--bio); }
+.product-card.chemistry { border-top: 8px solid var(--chem); }
+.product-card.physics { border-top: 8px solid var(--phys); }
+.product-card.bundle { border-top: 8px solid var(--accent); background: #1b1b1b; color: var(--paper); }
+.product-card.bundle p, .product-card.bundle .kit-code { color: #ded8cc !important; }
+
+.split {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.steps {
+  display: grid;
+  gap: .75rem;
+}
+
+.steps div {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  align-items: center;
+  border-bottom: 2px solid var(--line);
+  padding: 1rem 0;
+}
+
+.steps b {
+  font-family: "Courier New", Courier, monospace;
+  color: var(--red);
+}
+
+.steps span {
+  font-size: clamp(1.5rem, 3vw, 3rem);
+  letter-spacing: -.05em;
+}
+
+.proof {
+  background: var(--card);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: .75rem;
+}
+
+.proof-grid span {
+  border: 2px solid var(--line);
+  padding: 1rem;
+  font-weight: 800;
+  background: var(--paper);
+}
+
+.register {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+label {
+  display: grid;
+  gap: .35rem;
+  font-family: "Courier New", Courier, monospace;
+  font-size: .78rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+input, select {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--line);
+  background: rgba(255,255,255,.4);
+  font: inherit;
+  font-family: Inter, Helvetica, Arial, sans-serif;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+footer {
+  padding: 2rem clamp(1rem, 6vw, 6rem);
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: end;
+  border-top: 1px solid rgba(0,0,0,.12);
+}
+
+.brand-label.small {
+  min-width: 220px;
+}
+
+.brand-label.small strong {
+  font-size: .9rem;
+}
+
+@media (max-width: 950px) {
+  .site-header, footer { align-items: flex-start; flex-direction: column; }
+  nav { flex-wrap: wrap; }
+  .hero, .split, .proof { grid-template-columns: 1fr; }
+  .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+  .brand-label { min-width: 0; width: 100%; }
+  .product-grid, .proof-grid { grid-template-columns: 1fr; }
+  .spec-list { grid-template-columns: 1fr 1fr; }
+  h1 { font-size: 3.4rem; }
+}

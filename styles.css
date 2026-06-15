@@ -40,7 +40,7 @@ h3 { font-size: 1.35rem; line-height: 1.15; }
 .button:hover, button:hover { background: var(--sulphur); color: var(--ink); }
 
 .hero-card { padding: clamp(1.25rem, 3vw, 2rem); border: 2px solid var(--ink); border-radius: 8px; background: var(--panel); box-shadow: 18px 18px 0 var(--blue); transform: rotate(1.5deg); }
-.label-card { display: flex; align-items: center; min-height: 140px; width: 100%; box-shadow: 8px 8px 0 var(--sulphur); }
+.label-card { display: flex; align-items: center; width: fit-content; max-width: 100%; margin-inline: auto; box-shadow: 8px 8px 0 var(--sulphur); }
 .label-card strong { font-size: clamp(1.45rem, 2.5vw, 2.15rem); }
 .spec-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: .6rem; margin-top: 1.5rem; }
 .spec-list span { padding: .7rem; border: 1px solid var(--ink); border-radius: 6px; background: var(--paper); font-size: .7rem; font-weight: 700; }

@@ -93,7 +93,7 @@ h3 { font-size: 1.3rem; line-height: 1.18; }
 .product-card.bundle .kit-code { margin-bottom: .75rem; }
 .bundle-symbols { display: flex; gap: .45rem; align-items: center; margin-bottom: 2rem; }
 .bundle-symbols svg { width: 36px; height: 36px; fill: none; stroke: var(--ink); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
-.bundle-symbols img { width: 36px; height: 36px; object-fit: contain; filter: grayscale(1) contrast(2.2) brightness(.25); mix-blend-mode: multiply; }
+.bundle-symbols .bundle-dna { width: 36px; height: 36px; object-fit: contain; filter: grayscale(1) contrast(2.4) brightness(.2); mix-blend-mode: multiply; }
 
 .split, .proof { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(4rem, 9vw, 9rem); align-items: start; }
 .split { border-top: 8px solid var(--forest); }

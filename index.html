@@ -28,8 +28,8 @@
     <section class="hero">
       <div class="hero-copy">
         <p class="eyebrow">Practical science for every stage</p>
-        <h1>Practical science, ready to use at home.</h1>
-        <p class="lede">Complete science kits for home-educated students at KS2, KS3 and GCSE. Each one brings together the equipment, practical guides, recording sheets and questions needed to learn through experiments.</p>
+        <h1>Practical science, ready to use.</h1>
+        <p class="lede">Complete science kits for home education, tutoring, schools and small-group teaching at KS2, KS3 and GCSE. Each one brings together the equipment, practical guides, recording sheets and questions needed to learn through experiments.</p>
         <div class="actions">
           <a class="button primary" href="#kits">View the kits</a>
           <a class="button secondary" href="#order">Order now</a>
@@ -153,6 +153,7 @@
         </article>
 
         <article class="product-card bundle" id="bundle">
+          <p class="kit-code">Complete GCSE pathway · 14-16 years old</p>
           <div class="bundle-symbols" aria-hidden="true">
             <svg viewBox="0 0 64 64">
               <g transform="rotate(-35 32 32)">
@@ -171,7 +172,6 @@
               <circle cx="32" cy="32" r="4" />
             </svg>
           </div>
-          <p class="kit-code">Complete GCSE pathway · 14–16 years old</p>
           <h3>Complete GCSE Science Bundle</h3>
           <p>A complete GCSE practical science collection covering biology, chemistry and physics.</p>
           <ul>
@@ -203,9 +203,9 @@
 
     <section class="section proof">
       <div>
-        <p class="eyebrow">Designed for home education</p>
+        <p class="eyebrow">Designed for flexible teaching</p>
         <h2>Structured for students. Manageable for parents.</h2>
-        <p>Each practical is organised to make preparation straightforward and help students work with increasing independence, with app-based feedback on practical write-ups.</p>
+        <p>Each practical is organised to make preparation straightforward for parents, tutors and teachers, helping students work with increasing independence, with app-based feedback on practical write-ups.</p>
       </div>
       <div class="proof-grid">
         <span>Curriculum-linked</span>
@@ -232,10 +232,10 @@
     <section class="section story" id="story">
       <p class="eyebrow">Our story</p>
       <div class="story-layout">
-        <h2>Built by science teachers, for serious science at home.</h2>
+        <h2>Built by science teachers, for serious science beyond the lab.</h2>
         <div>
           <p>Lab in a Box was created by UK secondary science teachers with years of classroom and laboratory experience. We understand curriculum requirements, practical technique, laboratory craft and the common pitfalls that can stop students gaining confidence.</p>
-          <p>We saw a gap between generic STEM activity kits and the rigorous practical work students need for future study and careers in science. Our kits bring proper scientific thinking into the home: purposeful experiments, reliable methods, careful recording and meaningful evaluation.</p>
+          <p>We saw a gap between generic STEM activity kits and the rigorous practical work students need for future study and careers in science. Our kits bring proper scientific thinking into homes, tutoring spaces and schools with limited lab access: purposeful experiments, reliable methods, careful recording and meaningful evaluation.</p>
         </div>
       </div>
     </section>
@@ -243,7 +243,7 @@
     <section class="section order" id="order">
       <p class="eyebrow">Order now</p>
       <h2>Order your kit</h2>
-      <p>Choose the kit you need and send the details through. We will confirm availability, delivery and payment details by email.</p>
+      <p>Choose one or more kits and send the details through. We will confirm availability, quantities, delivery and payment details by email.</p>
 
       <form name="order" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="order" />
@@ -259,29 +259,23 @@
           Phone
           <input type="tel" name="phone" autocomplete="tel" />
         </label>
-        <label>
-          Kit
-          <select name="kit" required>
-            <option>KS2 Science Kit</option>
-            <option>KS3 Science Kit</option>
-            <option>GCSE Biology Kit</option>
-            <option>GCSE Chemistry Kit</option>
-            <option>GCSE Physics Kit</option>
-            <option>Complete GCSE Science Bundle</option>
-            <option>School order / class sets</option>
-          </select>
-        </label>
-        <label>
-          Quantity
-          <input type="number" name="quantity" min="1" value="1" required />
-        </label>
+        <fieldset class="kit-options full">
+          <legend>Kits to order</legend>
+          <label><input type="checkbox" name="kits" value="KS2 Science Kit" /> KS2 Science Kit</label>
+          <label><input type="checkbox" name="kits" value="KS3 Science Kit" /> KS3 Science Kit</label>
+          <label><input type="checkbox" name="kits" value="GCSE Biology Kit" /> GCSE Biology Kit</label>
+          <label><input type="checkbox" name="kits" value="GCSE Chemistry Kit" /> GCSE Chemistry Kit</label>
+          <label><input type="checkbox" name="kits" value="GCSE Physics Kit" /> GCSE Physics Kit</label>
+          <label><input type="checkbox" name="kits" value="Complete GCSE Science Bundle" /> Complete GCSE Science Bundle</label>
+          <label><input type="checkbox" name="kits" value="School order / class sets" /> School order / class sets</label>
+        </fieldset>
         <label>
           Delivery postcode
           <input type="text" name="postcode" autocomplete="postal-code" required />
         </label>
         <label class="full">
-          Notes
-          <textarea name="notes" rows="4" placeholder="Anything useful: exam board, year group, school order details, or questions before ordering."></textarea>
+          Quantities and notes
+          <textarea name="notes" rows="4" placeholder="Tell us quantities, year groups, exam board, school order details, or questions before ordering."></textarea>
         </label>
         <button type="submit">Send order request</button>
       </form>

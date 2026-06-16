@@ -24,7 +24,7 @@ section[id] { scroll-margin-top: 164px; }
 
 .site-header { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: 2rem; min-height: 112px; padding: 1rem clamp(1rem, 5vw, 5rem); border-bottom: 1px solid var(--line); background: var(--kraft) url("assets/kraft-paper.webp") center / cover; }
 .brand-label, .label-card { position: relative; display: inline-block; width: fit-content; max-width: 100%; border: 3px solid var(--ink); background: var(--cream); box-shadow: 8px 8px 0 rgba(23,24,19,.28); }
-.site-header .brand-label { width: fit-content; background: var(--cream); border-width: 4px; }
+.site-header .brand-label { width: fit-content; background: var(--cream); border-width: 4px; box-shadow: 8px 8px 0 var(--sulphur); }
 .site-header .brand-label > div { padding: .62rem 1rem .68rem; }
 .site-header .brand-label strong { font-size: clamp(2rem, 2.5vw, 2.65rem); font-weight: 950; letter-spacing: .11em; white-space: nowrap; }
 .site-header .brand-label span { margin-top: .38rem; padding-top: .34rem; border-top-width: 3px; font-size: clamp(.56rem, .72vw, .72rem); letter-spacing: .1em; white-space: nowrap; }
@@ -68,7 +68,7 @@ h3 { font-size: 1.3rem; line-height: 1.18; }
 
 .product-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: .8rem; }
 .product-card { position: relative; display: flex; min-height: 390px; flex-direction: column; padding: 1.35rem; border: 1px solid var(--line); background: var(--cream); box-shadow: 5px 5px 0 rgba(52,52,45,.09); }
-.product-card.ks2 { border-top: 6px solid var(--forest); }
+.product-card.ks2 { border-top: 6px solid var(--sulphur); }
 .product-card.ks3 { border-top: 6px solid var(--forest); }
 .product-card.biology { border-top: 6px solid var(--plum); }
 .product-card.chemistry { border-top: 6px solid var(--plum); }
@@ -76,8 +76,8 @@ h3 { font-size: 1.3rem; line-height: 1.18; }
 .product-card.bundle { border-top: 6px solid var(--ink); background: var(--sulphur); }
 .product-card > p:not(.kit-code), .product-card ul { color: var(--muted); }
 .product-card.bundle > p:not(.kit-code), .product-card.bundle ul { color: #37342d; }
-.kit-code { max-width: calc(100% - 76px); margin-bottom: 3.5rem; color: #79613e; font-size: .78rem; font-weight: 850; letter-spacing: .08em; line-height: 1.35; text-transform: uppercase; }
-.product-card.ks2 .kit-code, .product-card.ks3 .kit-code, .product-card.bundle .kit-code { max-width: 100%; }
+.kit-code { max-width: calc(100% - 82px); min-height: 2.1rem; margin-bottom: 3.5rem; color: #79613e; font-size: .72rem; font-weight: 850; letter-spacing: .07em; line-height: 1.25; text-transform: uppercase; }
+.product-card.bundle .kit-code { max-width: 100%; }
 .product-card ul { margin: auto 0 0; padding: 1rem 0 0; border-top: 1px solid var(--soft-line); font-size: .82rem; list-style: none; }
 .product-card.bundle ul { border-color: rgba(52,52,45,.45); }
 .product-card li + li { margin-top: .4rem; }
@@ -87,13 +87,13 @@ h3 { font-size: 1.3rem; line-height: 1.18; }
 .subject-symbol { position: absolute; top: 1.1rem; right: 1.1rem; width: 66px; height: 66px; fill: none; stroke: var(--plum); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
 .stage-symbol { stroke: var(--forest); }
 .explosion-symbol { fill: var(--forest); stroke: none; }
-.core-symbol { fill: none; stroke: var(--forest); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+.core-symbol { padding: .35rem; background: var(--sulphur); fill: none; stroke: var(--ink); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
 .magnify-symbol { stroke-width: 5; }
 .dna-symbol { width: 74px; height: 74px; object-fit: contain; mix-blend-mode: multiply; }
 .product-card.bundle .kit-code { margin-bottom: .75rem; }
 .bundle-symbols { display: flex; gap: .45rem; align-items: center; margin-bottom: 2rem; }
 .bundle-symbols svg { width: 36px; height: 36px; fill: none; stroke: var(--ink); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
-.bundle-symbols img { width: 36px; height: 36px; object-fit: contain; mix-blend-mode: multiply; }
+.bundle-symbols img { width: 36px; height: 36px; object-fit: contain; filter: grayscale(1) contrast(2.2) brightness(.25); mix-blend-mode: multiply; }
 
 .split, .proof { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(4rem, 9vw, 9rem); align-items: start; }
 .split { border-top: 8px solid var(--forest); }

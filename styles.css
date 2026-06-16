@@ -137,8 +137,10 @@ textarea { resize: vertical; }
 .kit-options label { display: flex; align-items: center; gap: .55rem; font-size: .82rem; font-weight: 750; letter-spacing: 0; line-height: 1.25; text-transform: none; }
 .kit-options input { flex: 0 0 auto; width: 18px; height: 18px; margin: 0; padding: 0; accent-color: var(--forest); }
 footer { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; padding: 2rem clamp(1.25rem, 7vw, 7rem); border-top: 1px solid var(--line); color: var(--muted); font-size: .76rem; }
-.brand-label.small { width: fit-content; }
-.brand-label.small strong { font-size: .98rem; }
+.brand-label.footer-logo { width: fit-content; border-width: 4px; box-shadow: 8px 8px 0 var(--sulphur); }
+.brand-label.footer-logo > div { padding: .62rem 1rem .68rem; }
+.brand-label.footer-logo strong { color: var(--ink); font-size: clamp(1.35rem, 2vw, 2rem); font-weight: 950; letter-spacing: .11em; white-space: nowrap; }
+.brand-label.footer-logo span { margin-top: .38rem; padding-top: .34rem; border-top-width: 3px; color: var(--ink); font-size: clamp(.45rem, .65vw, .6rem); letter-spacing: .1em; white-space: nowrap; }
 
 @media (max-width: 950px) {
   .site-header { align-items: flex-start; flex-direction: column; }

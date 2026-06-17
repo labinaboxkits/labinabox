@@ -23,7 +23,7 @@ p, h1, h2, h3 { margin-top: 0; }
 section[id] { scroll-margin-top: 164px; }
 
 .site-header { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: 2rem; min-height: 112px; padding: 1rem clamp(1rem, 5vw, 5rem); border-bottom: 1px solid var(--line); background: var(--kraft) url("assets/kraft-paper.webp") center / cover; }
-.brand-mark { display: block; width: 86px; line-height: 0; }
+.brand-mark { display: block; width: 82px; line-height: 0; }
 .brand-mark img { display: block; width: 100%; height: auto; }
 .brand-label, .label-card { position: relative; display: inline-block; width: fit-content; max-width: 100%; border: 3px solid var(--ink); background: var(--cream); box-shadow: 8px 8px 0 rgba(23,24,19,.28); }
 .site-header .brand-label { width: fit-content; background: var(--cream); border-width: 4px; box-shadow: 8px 8px 0 var(--sulphur); }
@@ -146,7 +146,7 @@ footer { display: flex; align-items: flex-end; justify-content: space-between; g
 
 @media (max-width: 950px) {
   .site-header { align-items: flex-start; flex-direction: column; }
-  .brand-mark { width: 78px; }
+  .brand-mark { width: 76px; }
   .site-header .brand-label { width: fit-content; max-width: 100%; }
   nav { width: max-content; max-width: 100%; overflow-x: auto; }
   .hero, .split, .proof, .schools, .story-layout { grid-template-columns: 1fr; }

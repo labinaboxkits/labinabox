@@ -23,8 +23,10 @@ p, h1, h2, h3 { margin-top: 0; }
 section[id] { scroll-margin-top: 164px; }
 
 .site-header { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: 2rem; min-height: 112px; padding: 1rem clamp(1rem, 5vw, 5rem); border-bottom: 1px solid var(--line); background: var(--kraft) url("assets/kraft-paper.webp") center / cover; }
-.brand-mark { position: relative; z-index: 0; display: grid; width: 54px; aspect-ratio: 1 / 2.55; grid-template-rows: repeat(3, 1fr); align-items: center; justify-items: center; border: 3px solid var(--ink); background: transparent; color: var(--ink); font-family: Impact, "Arial Black", "Arial Narrow", sans-serif; font-size: 1.72rem; font-weight: 900; letter-spacing: 0; line-height: .8; text-align: center; }
-.brand-mark::before { content: ""; position: absolute; right: -7px; bottom: -7px; z-index: -1; width: 100%; height: 100%; background: var(--sulphur); }
+.brand-mark { position: relative; z-index: 0; display: grid; width: 58px; aspect-ratio: 1 / 2.55; grid-template-rows: repeat(3, 1fr); align-items: center; justify-items: center; border: 3px solid var(--ink); background: transparent; color: var(--ink); font-family: Impact, "Arial Black", "Arial Narrow", sans-serif; font-size: 1.92rem; font-weight: 900; letter-spacing: 0; line-height: .8; text-align: center; }
+.brand-mark::before, .brand-mark::after { content: ""; position: absolute; z-index: -1; background: var(--sulphur); }
+.brand-mark::before { top: 8px; right: -8px; width: 8px; height: 100%; }
+.brand-mark::after { right: -8px; bottom: -8px; width: calc(100% + 8px); height: 8px; }
 .brand-mark span { display: block; transform: scaleX(.88); }
 .brand-label, .label-card { position: relative; display: inline-block; width: fit-content; max-width: 100%; border: 3px solid var(--ink); background: var(--cream); box-shadow: 8px 8px 0 rgba(23,24,19,.28); }
 .site-header .brand-label { width: fit-content; background: var(--cream); border-width: 4px; box-shadow: 8px 8px 0 var(--sulphur); }
@@ -147,7 +149,7 @@ footer { display: flex; align-items: flex-end; justify-content: space-between; g
 
 @media (max-width: 950px) {
   .site-header { align-items: flex-start; flex-direction: column; }
-  .brand-mark { width: 50px; font-size: 1.6rem; }
+  .brand-mark { width: 54px; font-size: 1.78rem; }
   .site-header .brand-label { width: fit-content; max-width: 100%; }
   nav { width: max-content; max-width: 100%; overflow-x: auto; }
   .hero, .split, .proof, .schools, .story-layout { grid-template-columns: 1fr; }
@@ -158,7 +160,7 @@ footer { display: flex; align-items: flex-end; justify-content: space-between; g
 @media (max-width: 620px) {
   section[id] { scroll-margin-top: 220px; }
   .brand-label { max-width: 100%; }
-  .brand-mark { width: 46px; font-size: 1.46rem; }
+  .brand-mark { width: 50px; font-size: 1.64rem; }
   .site-header .brand-label > div { padding: .55rem .6rem .62rem; }
   .site-header .brand-label strong { font-size: clamp(1.65rem, 8vw, 2.2rem); white-space: normal; }
   .site-header .brand-label span { margin-top: .35rem; padding-top: .32rem; font-size: clamp(.45rem, 2.4vw, .58rem); white-space: normal; }

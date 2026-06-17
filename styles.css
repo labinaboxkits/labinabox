@@ -23,6 +23,8 @@ p, h1, h2, h3 { margin-top: 0; }
 section[id] { scroll-margin-top: 164px; }
 
 .site-header { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: 2rem; min-height: 112px; padding: 1rem clamp(1rem, 5vw, 5rem); border-bottom: 1px solid var(--line); background: var(--kraft) url("assets/kraft-paper.webp") center / cover; }
+.brand-mark { display: grid; width: 74px; height: 116px; place-items: center; padding: .48rem 0 .55rem; border: 4px solid var(--ink); background: var(--kraft) url("assets/kraft-paper.webp") center / cover; box-shadow: 8px 8px 0 var(--sulphur); color: var(--ink); font-size: 2.05rem; font-weight: 950; letter-spacing: .02em; line-height: .82; text-align: center; }
+.brand-mark span { display: block; }
 .brand-label, .label-card { position: relative; display: inline-block; width: fit-content; max-width: 100%; border: 3px solid var(--ink); background: var(--cream); box-shadow: 8px 8px 0 rgba(23,24,19,.28); }
 .site-header .brand-label { width: fit-content; background: var(--cream); border-width: 4px; box-shadow: 8px 8px 0 var(--sulphur); }
 .site-header .brand-label > div { padding: .62rem 1rem .68rem; }
@@ -144,6 +146,7 @@ footer { display: flex; align-items: flex-end; justify-content: space-between; g
 
 @media (max-width: 950px) {
   .site-header { align-items: flex-start; flex-direction: column; }
+  .brand-mark { width: 66px; height: 104px; font-size: 1.84rem; }
   .site-header .brand-label { width: fit-content; max-width: 100%; }
   nav { width: max-content; max-width: 100%; overflow-x: auto; }
   .hero, .split, .proof, .schools, .story-layout { grid-template-columns: 1fr; }
@@ -154,6 +157,7 @@ footer { display: flex; align-items: flex-end; justify-content: space-between; g
 @media (max-width: 620px) {
   section[id] { scroll-margin-top: 220px; }
   .brand-label { max-width: 100%; }
+  .brand-mark { width: 60px; height: 94px; font-size: 1.66rem; box-shadow: 6px 6px 0 var(--sulphur); }
   .site-header .brand-label > div { padding: .55rem .6rem .62rem; }
   .site-header .brand-label strong { font-size: clamp(1.65rem, 8vw, 2.2rem); white-space: normal; }
   .site-header .brand-label span { margin-top: .35rem; padding-top: .32rem; font-size: clamp(.45rem, 2.4vw, .58rem); white-space: normal; }
